@@ -23,10 +23,27 @@ body{
 	margin-right: 1vw; 
 }
 
-.question{
-	float: left;
+
+.picAndQuote{
+	padding: 2%;
+	width: 25%;
+}
+
+.plus{
+	float: right;
+	background: rgba(0, 0, 0, 0.1);
+	padding: 1em;
 	width: 20px;
 	height: 20px;
+}
+
+#questNplus{
+  width: 100%;
+}
+
+.question{
+	width: 20px;
+	height: 20px; 
 	font-weight: bold;
 	font-size: 1em;
 	background-color: orange;
@@ -39,22 +56,21 @@ body{
 }
 
 .bottom{
-	
-	padding-left: 10%;
-	width: 5%;
-	height: 5%;
-	padding: 5%;
-	border: 3px solid black;
+	color: rgba(0, 0, 0, 0.0);
+	display: inline;
+	padding: 2px;
+	margin: 3px;
+	width: 5px;
+	border: 1px solid white;
 }
 
-.plus{
-	float: right;
-	background: rgba(0, 0, 0, 0.1);
-		display: inline;
-	padding: 1em;
-	width: 20px;
-	height: 20px;
+footer{ 
+	margin-left: 50%;
+	width: 100%;
+	bottom:5%;
+	position: fixed;
 }
+
 
 .quoteHolder{
 	margin-left: auto;
@@ -66,12 +82,6 @@ body{
 	margin: 4vw;
 }
 
-footer{
-	width: 100%;
-	background-color: white;
-	bottom:0;
-	position: fixed;
-}
 
 h2 span{
 	text-decoration: underline;
@@ -116,9 +126,14 @@ border-radius: 50%;
 	font-size: 0.75em;
 }
 
-.picAndQuote{
-	padding: 2%;
-	width: 25%;
+
+.backgroundWrap{
+	position: fixed;
+	z-index: -1000;
+	width: 100%;
+	height: 100%;
+	top:0;
+	left:0;
 }
 
 .quotainer{	
