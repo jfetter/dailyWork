@@ -1,0 +1,6 @@
+div{border: 1px solid orange;
+display: block;
+height: 25px;
+padding: 0.5em; /*space around text*/
+margin: 0.5em ; /*space around border*/
+}

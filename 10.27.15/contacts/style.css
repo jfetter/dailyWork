@@ -1,0 +1,24 @@
+table{border: 3px solid black;
+		height: 75%;
+		width: 50%;
+		text-align: center;
+		border-collapse: collapse;
+		margin: 1em;
+}
+
+caption{text-align: center;
+font-size: 2em;
+font-family: sans-serif;
+}
+
+th{font-size: .75em;
+	font-family: sans-serif;
+	font: small-caps;
+	border: 1px solid black;}
+
+tr, td{border: 1px solid black;
+	height: 33%;
+	width: 33%;
+	padding: 1em;
+}
+

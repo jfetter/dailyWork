@@ -1,0 +1,150 @@
+
+body{
+	background-color:black;
+	color: white;	 
+	font-family: sans-serif;
+}
+
+#logo{
+	/*min-width: 481px;*/
+	height: 90px;
+	width: 160px;
+}
+
+#apply{
+	float: right;
+	border: 0.15em solid white;
+	color: white;
+	background-color: orange;
+	border-radius: 5%;
+	height: 6vh;
+	width: 10vw;
+	font-size: 1.5em;
+	margin-right: 1vw; 
+}
+
+.question{
+	float: left;
+	width: 20px;
+	height: 20px;
+	font-weight: bold;
+	font-size: 1em;
+	background-color: orange;
+}
+
+#circDiv{
+	float: left;
+	display: inline;
+	text-align: center;
+}
+
+.bottom{
+	
+	padding-left: 10%;
+	width: 5%;
+	height: 5%;
+	padding: 5%;
+	border: 3px solid black;
+}
+
+.plus{
+	float: right;
+	background: rgba(0, 0, 0, 0.1);
+		display: inline;
+	padding: 1em;
+	width: 20px;
+	height: 20px;
+}
+
+.quoteHolder{
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+}
+
+#payWhen{
+	margin: 4vw;
+}
+
+footer{
+	width: 100%;
+	background-color: white;
+	bottom:0;
+	position: fixed;
+}
+
+h2 span{
+	text-decoration: underline;
+}
+
+.cent{
+	 text-align: center;
+}
+
+.quoteText{
+	margin: 2em;
+	margin-bottom: 0.5em;
+	width: 33%;
+}
+
+.quote{
+	font-family: serif;
+	font-weight: bold;
+	font-size: 3em;
+	color:orange;
+	text-align: left;
+}
+
+.end{text-align: right;
+	
+} 
+
+.pic{
+	width: 10%;
+}
+
+#liveIN{
+	 font-stretch: expanded;
+	 margin: 3vw;
+}
+
+.circle{
+border-radius: 50%;
+}
+
+.attrib{
+	font-size: 0.75em;
+}
+
+.picAndQuote{
+	padding: 2%;
+	width: 25%;
+}
+
+.quotainer{	
+	float: left;
+	background-color:black; 
+	background: rgba(0, 0, 0, 0.1);
+}
+
+
+#firstQ{
+	float: left;
+}
+
+#secondQ{
+	float: left ; 
+}
+
+#thirdQ{
+	float: left;
+}
+
+p{
+	display: inline;
+}
+
+.atribainer{
+	float:left;
+	width: 100%;
+}

@@ -1,0 +1,70 @@
+body{
+	font-family: sans-serif;
+}
+
+a {text-decoration: none; 
+}
+
+button{
+	border: none; 
+}
+
+.top{
+	display: inline;
+	margin-right: 20%;
+	float: right;
+	font-size: 10px; 
+	
+}
+
+a , .square { color:gray;
+	font-weight: normal;
+
+}
+.box{
+	display: block;
+}
+
+.square{  
+	 				display: inline-block;
+					background-color: gray;
+					height:1px;
+					width:1px;
+					padding:10%;
+					border: 1px solid white;
+
+}
+
+#signIn{background-color: #0266C8; 
+	color:white;
+	box-shadow: none;
+	border-radius: 5%;
+}
+
+#center{
+	padding: 25%;
+	padding-top:25%;
+
+}
+
+#logo{
+	height: 92px;
+	width: 272px;
+}
+
+footer{
+	display: inline;
+	position: fixed;
+	vertical-align: bottom;
+}
+
+
+#search{
+	height: 26px;
+	width: 125px;
+}
+
+#mic{
+	height: 48px;
+	width: 48px;
+}
