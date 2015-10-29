@@ -4,7 +4,9 @@ var students = [];
 
 //reuse this function for pairing and teaming
 function moveArrayToDOM(array, id){
+	// if (id !== "groups"){
 document.getElementById(id).innerHTML = "";
+// }
 var containerDiv =[];
 return array.forEach(function(item, index, all){
 var li = document.createElement("li");
@@ -71,23 +73,25 @@ studentNameInput.addEventListener('keypress', enterPressed);
 
 function pairUp(){
 	var size = teamSize.value;
-	console.log(size);
+	console.log("size " + size);
+	var student = randomizeStudents();
+	var length = student.length; 
+	console.log("length" + length + "student" + student)
 	 var tempArray = [];
-   var group = [];
-   var array = randomizeStudents();
-   if (size > 0){
+   var c = 0; 
+   if (size){
    	tempArray = [];
- 	for (var i = size -1; i < array.length; i +=size){ 
-
- 			 for (var x = size; x > 0; x--){
- 			 		console.log(array[x]);
- 			 		tempArray.push(array[x]);
+ 		for (var i = student.length -1; i > 0; i = i- size){ 
+ 				c++; 
+ 		    tempArray.push("team" + c);
+ 			 for (var x = size * i +1; x > i; x --){
+ 			 		console.log(student[x]);
+ 			 		tempArray.push(student[x]);
+ 				  moveArrayToDOM(tempArray, "groups");
  			 	}		
- 				group.push(tempArray);
+ 		}
  	}
- }
- 	 	console.log("group" + group);
- 	 	 moveArrayToDOM(pairUp, "groups");
- 	return group; 
+ 	// return group; 
 };
+
 
