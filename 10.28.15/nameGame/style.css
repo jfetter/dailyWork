@@ -1,9 +1,3 @@
 h1{color: red;}
 
-/*students.forEach(function(item, index, all){
-var div = document.createElement("div");
-console.log(div);
-var textItem = document.createTextNode(item);
-div.appendChild = textItem; 
-div.setAttribute("class", "name");
-var namesDiv = document.getElementById("namesDiv");*/
+#{background-color: red }
