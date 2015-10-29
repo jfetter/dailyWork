@@ -1,8 +1,6 @@
 document.getElementById('addButton').addEventListener('click', addStudent);
 
-
 var students = [];
-var randomizedStudents = [];
 
 //reuse this function for pairing and teaming
 function moveArrayToDOM(array, id){
@@ -46,6 +44,16 @@ function addStudent() {
 
  }
 }
+function assignStudents(number) {
+	var student = randomizeStudents();
+	var luckyStudent = student[number].split();
+	return luckyStudent;
+}
+
+document.getElementById('randomPerson').addEventListener('click', selectOne);
+function selectOne(){
+	moveArrayToDOM(assignStudents(1), "oneRandomer")
+}
 
 document.getElementById('triggerRandomizer').addEventListener('click', randomizeStudents);
 function randomizeStudents(){
@@ -53,9 +61,33 @@ function randomizeStudents(){
 		return 0.5 - Math.random();
 });
 	console.log(students);
-	moveArrayToDOM(randomStudents);
-    
-
+	//moveArrayToDOM(randomStudents, "randomizedNames");
+	return randomStudents;
 };
 
+document.getElementById('makeTeam').addEventListener('click', pairUp);
+var teamSize = document.getElementById('teamSize');
+studentNameInput.addEventListener('keypress', enterPressed);
+
+function pairUp(){
+	var size = teamSize.value;
+	console.log(size);
+	 var tempArray = [];
+   var group = [];
+   var array = randomizeStudents();
+   if (size > 0){
+   	tempArray = [];
+ 	for (var i = size -1; i < array.length; i +=size){ 
+
+ 			 for (var x = size; x > 0; x--){
+ 			 		console.log(array[x]);
+ 			 		tempArray.push(array[x]);
+ 			 	}		
+ 				group.push(tempArray);
+ 	}
+ }
+ 	 	console.log("group" + group);
+ 	 	 moveArrayToDOM(pairUp, "groups");
+ 	return group; 
+};
 
