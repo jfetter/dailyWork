@@ -99,7 +99,6 @@ studentNameInput.addEventListener('keypress', enterPressed);
  			  	moveArrayToDOM(tempArray, "groups");
  		}
  	}
- 	// return group; 
 };
 
 

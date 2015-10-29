@@ -1,6 +1,7 @@
 body{
 	text-align: center;
 	background-color: aqua;
+	text-decoration: none;
 }
 
 h1{color: orange;}
@@ -20,7 +21,6 @@ h1{color: orange;}
 
 li, ul{
 	background-color: white; 
-	text-decoration: none;
 }
 
 button{
