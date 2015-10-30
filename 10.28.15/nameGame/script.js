@@ -5,17 +5,16 @@ var students = [];
 //reuse this function for pairing and teaming
 function moveArrayToDOM(array, id){
 	if (id !== "groups"){
-document.getElementById(id).innerHTML = "";
- }
-var containerDiv =[];
-return array.forEach(function(item, index, all){
-var li = document.createElement("li");
-var textItem = document.createTextNode(item);
-li.appendChild(textItem);
-document.getElementById(id).appendChild(li);
-});
+	document.getElementById(id).innerHTML = "";
+ 	}
+	var containerDiv =[];
+	return array.forEach(function(item, index, all){
+	var li = document.createElement("li");
+	var textItem = document.createTextNode(item);
+	li.appendChild(textItem);
+	document.getElementById(id).appendChild(li);
+	});
 }
-
 
 var studentNameInput = document.getElementById('studentName');
 studentNameInput.addEventListener('keypress', enterPressed)
@@ -29,25 +28,25 @@ function enterPressed() {
 }
 
 function addStudent() {
- var inputStr = studentNameInput.value;
- if (inputStr) {
+  var inputStr = studentNameInput.value;
+  if (inputStr) {
  
-   var names = inputStr.trim().split(',');
-   names = names.map(function(name){
-       return name.trim();
-   }).filter(function(name){
+  var names = inputStr.trim().split(',');
+  names = names.map(function(name){
+  return name.trim();
+  }).filter(function(name){
        return name !== "";
    });
-   students = students.concat(names);
- studentNameInput.value = '';
- studentNameInput.focus();
+  students = students.concat(names);
+  studentNameInput.value = '';
+  studentNameInput.focus();
 
  moveArrayToDOM(students, "namesUL");
-
  }
 }
+
 function assignStudents(number) {
-	var student = randomizeStudents();
+	var student = students.concat(randomizeStudents());
 	var luckyStudent = student[number].split();
 	return luckyStudent;
 }
@@ -61,7 +60,7 @@ document.getElementById('triggerRandomizer').addEventListener('click', randomize
 
 function randomizeStudents(){
 	var randomStudents = students.sort(function(a,b){
-		return 0.5 - Math.random();
+	return 0.5 - Math.random();
 });
 	students = randomStudents;
 	moveArrayToDOM(randomStudents, "namesUL");
@@ -72,29 +71,29 @@ document.getElementById('makeTeam').addEventListener('click', pairUp);
 var teamSize = document.getElementById('teamSize');
 studentNameInput.addEventListener('keypress', enterPressed);
 
-
-// var studentArray = document.getElementById('namesUL').textContent;
-
  function pairUp(){
-	console.log("students array for pairUp" + students);
+ 	
+ 	document.getElementById("groups").innerHTML = "";
+ 	document.getElementById("teamSize").innerHTML = "";
+	studentsArray = students.concat();
+	console.log("students array for pairUp" + studentsArray);
 	var size = teamSize.value;
 	console.log("size " + size);
-	var length = students.length; 
-	console.log("length" + length + "students" + students)
+	var length = studentsArray.length; 
+	console.log("length" + length + "studentsArray" + studentsArray)
 	 var tempArray = [];
-	 var runTimes = Math.ceil(students.length/size);
-   if (size > 0){
-   	console.log("in if")
+	 var runTimes = Math.ceil(studentsArray.length/size);
+   if (size){
  		for (var i = 0; i < runTimes ; i++){ 
- 			     	tempArray = [];
+ 			    tempArray = [];
  				console.log("run loop this many times" + runTimes);
  		    tempArray.push("team" + (i + 1));
- 		    var x = students.length -1
- 		    var y = students.length - size; 
+ 		    var x = studentsArray.length -1
+ 		    var y = studentsArray.length - size; 
  			  for (x; x >= y && x >= 0; x --){
- 			  	tempArray.push(students[x]);
- 				  students.pop();
- 				  console.log("remaining pool of students" +students)
+ 			  	tempArray.push(studentsArray[x]);
+ 				  studentsArray.pop();
+ 				  console.log("remaining pool of studentsArray" +studentsArray)
  			  	}		
  			  	moveArrayToDOM(tempArray, "groups");
  		}
