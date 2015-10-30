@@ -30,19 +30,19 @@ $(".operator").on("click", operatorPressed);
 
 function operatorPressed(){
 		if (operatorHolder <= 1) {
- 		$("#display").text(numbInput + operatorHolder);
 		var opPresses = $(this).text();
 		operatorHolder.push(opPresses);
 		var operatorPressed = true;
+ 		$("#display").text(numbInput + operatorHolder);
 		console.log(operatorHolder);
-		if ($(this).class() === "pseudoOp"){
+		if (this.class === "pseudoOp"){
 		preformPseudoOperation();
 		}
 	}
 }
 
 function preformPseudoOperation () {
-	  var itemText = $(this).text();
+	  var itemText = this.text;
 	console.log("this text:" +  itemText);
 		if(itemText === "clear"){
 		 numbInput = "";
