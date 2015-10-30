@@ -12,6 +12,8 @@
 	width: 12%;
 	padding: 3%;
 	border: 1px solid black;
+	border-radius: 15%;
+	background-color: yellow;
 }
 
 #display{
@@ -19,7 +21,7 @@
 	padding: 3%;
 	margin-top: 5%;
 	font-weight: bold;
-	width: 75%;
+	width: 40vw;
 	border: 2px solid black;
 }
 

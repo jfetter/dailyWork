@@ -7,7 +7,9 @@ var numberHolder = [];
 var operatorHolder = []; 
 
 $("#equal").on("click", function(array){
-	$("#display").text(array);
+	var answer = "";
+
+	$("#display").text(answer);
  		
 });
 
@@ -27,21 +29,33 @@ $("#equal").on("click", function(array){
 $(".operator").on("click", operatorPressed);
 
 function operatorPressed(){
-	var opPresses = $(this).text();
-	operatorHolder.push(opPresses);
-	var operatorPressed = true;
-	console.log(operatorHolder);
-	triggerOperation();
+		if (operatorHolder <= 1) {
+ 		$("#display").text(numbInput + operatorHolder);
+		var opPresses = $(this).text();
+		operatorHolder.push(opPresses);
+		var operatorPressed = true;
+		console.log(operatorHolder);
+		if ($(this).class() === "pseudoOp"){
+		preformPseudoOperation();
+		}
+	}
 }
 
-function triggerOperation () {
-		if($(this).text() == "clear"){
+function preformPseudoOperation () {
+	  var itemText = $(this).text();
+	console.log("this text:" +  itemText);
+		if(itemText === "clear"){
 		 numbInput = "";
 		 numberHolder = [];
 		 operatorHolder = [];
 		 console.log("triggered clear");
 		}
-}
+// else if(itemText === "+/-"){
+//  	 numberHolder = parseInt(numberHolder) * -1; 
+// }
+// else if(itemText === ".")
+// 	{numberHolder += ".";}
+} // end preformPseudoOperation;
 
 
 
@@ -50,7 +64,7 @@ function triggerOperation () {
 $(".numb").on("click", function(){
 	var numbPresses = $(this).text();
 	numbInput += numbPresses;
- if (operatorHolder.length > 0){
+ if (operatorHolder.length === 1){
 	numberHolder.push(numbInput);
   numbInput = [];
    	console.log("numbHolder:" , numberHolder)
