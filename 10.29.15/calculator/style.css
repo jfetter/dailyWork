@@ -1,0 +1,11 @@
+body{
+	border: 1px solid black;
+}
+
+#display{
+	background-color: red;
+}
+
+.row .operator{
+	display: inline-block;
+}

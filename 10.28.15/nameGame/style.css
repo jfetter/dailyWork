@@ -10,7 +10,9 @@ body{
 	background-color: aqua;
 }
 
-h1{color: orange;}
+h1{
+	color: orange;
+}
 
 #names, #oneRandomer, #groups{
 	border: 1px solid black;
