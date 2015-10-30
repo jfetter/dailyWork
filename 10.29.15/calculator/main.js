@@ -2,7 +2,7 @@
 $(document).ready(init);
 function init (){
 
-var numbInput = [];
+var numbInput = "";
 var numberHolder = [];
 var operatorHolder = []; 
 
@@ -11,10 +11,7 @@ $("#equal").on("click", function(array){
  		
 });
 
-// let operatorPressed =()=>{
-//  	return true; 
 
-// };
 
 
 //create a state operatorPressed
@@ -27,11 +24,24 @@ $("#equal").on("click", function(array){
 // console.log("e +" + $e + "operatorPressed:" + operatorPressed)
 		
 
-$(".operator").on("click", function(){
+$(".operator").on("click", operatorPressed);
+
+function operatorPressed(){
 	var opPresses = $(this).text();
 	operatorHolder.push(opPresses);
+	var operatorPressed = true;
 	console.log(operatorHolder);
-});
+	triggerOperation();
+}
+
+function triggerOperation () {
+		if($(this).text() == "clear"){
+		 numbInput = "";
+		 numberHolder = [];
+		 operatorHolder = [];
+		 console.log("triggered clear");
+		}
+}
 
 
 
@@ -39,13 +49,14 @@ $(".operator").on("click", function(){
 // then push what you've got to a temporary array to operate on)
 $(".numb").on("click", function(){
 	var numbPresses = $(this).text();
-	numbInput.push(numbPresses);
-	// if (operatorPressed){
-	// numbPresses = parseInt(numbInput.join(""));
-	numberHolder.push();
-	// numbInput = [];
-	// }
+	numbInput += numbPresses;
+ if (operatorHolder.length > 0){
+	numberHolder.push(numbInput);
+  numbInput = [];
+   	console.log("numbHolder:" , numberHolder)
+ }
  		console.log(numbInput);
+ 		$("#display").text(numbInput);
 });
-
+ 		
 };
