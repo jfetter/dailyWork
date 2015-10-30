@@ -7,7 +7,7 @@
 	text-align: center;
 }
 
-.numb, .operator{
+.numb, .operator, #dot, #posNeg{
 	margin-top: 5%;
 	width: 12%;
 	padding: 3%;
@@ -24,6 +24,6 @@
 	background-color: green;
 }
 
-.row .operator, .row .numb{
+.row .operator, .row .numb, #posNeg, #dot{
 	display: inline-block;
 }
